@@ -1,0 +1,66 @@
+﻿<Window x:Class="NDScalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NDScalculator"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="НДС калькулятор" Height="500" Width="800">
+    <Grid  >
+        <Label
+            Content=""
+            x:Name="eshkeregrr"
+            
+            FontStyle="Italic"
+            Foreground="Purple" Height="114" RenderTransformOrigin="0.5,0.5" Margin="386,292,10,78"
+            />
+        <ComboBox MinWidth="70" x:Name="cb" Height="54" Margin="10,332,515,0" RenderTransformOrigin="0.471,0.524" VerticalAlignment="Top"  />
+        <StackPanel >
+
+            <TextBlock Text="Расчет НДС" 
+                        FontSize="30" 
+                       HorizontalAlignment="Center" 
+                       FontWeight="Bold" 
+                       Margin="0 0 0 20" Foreground="#FF8915B7" />
+
+
+            <TextBlock Text="Сумма (цена):" 
+                       FontSize="20"
+                       HorizontalAlignment="Left" 
+                       FontWeight="SemiBold" 
+                       Padding="20">
+
+            </TextBlock>
+
+            <TextBox MinWidth="100"  x:Name="pricevalue" Margin="5" ></TextBox>
+
+
+            <TextBlock Text="Ставка НДС , %:" 
+                       FontSize="20"
+                       HorizontalAlignment="Left" 
+                       FontWeight="SemiBold" 
+                       Padding="20">
+
+            </TextBlock>
+
+            <TextBox MinWidth="50"  x:Name="NDSvalue" Margin="2"  ></TextBox>
+
+            <TextBlock Text="Вид рассчета:"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                       HorizontalAlignment="Left" 
+                       Padding="20" Width="225"  
+                       />
+
+            <Button x:Name="button1" Content="Рассчитать"
+                    Click="button1_Click"  
+                    Width="200" Height="50"
+                    	
+                    />
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
